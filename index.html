@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A curated directory of design resources for developers, from fonts and icons to UI libraries and inspiration.">
+    <meta name="theme-color" content="#f5f5ef">
+    <title>Design Resources for Developers</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#resources">Skip to resources</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Design Resources for Developers home">
+        <span class="brand-icon" aria-hidden="true">D.</span>
+        <span>Design resources<br><strong>for developers</strong></span>
+      </a>
+      <a class="repo-link" href="https://github.com/bradtraversy/design-resources-for-developers" target="_blank" rel="noreferrer">
+        <span class="status-dot" aria-hidden="true"></span> Open source catalog <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Your next idea starts here</p>
+          <h1>Find the tools<br>to make it <em>real.</em></h1>
+          <p class="hero-text">Explore the tools, components, and creative resources behind better websites.</p>
+          <form class="hero-search" id="hero-search-form" role="search">
+            <label class="visually-hidden" for="hero-search">Search the resource collection</label>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg>
+            <input id="hero-search" type="search" placeholder="Try “animated buttons” or “fonts”" autocomplete="off" spellcheck="false">
+            <button type="submit" aria-label="Search resources">↵</button>
+          </form>
+          <div class="hero-actions">
+            <a class="primary-link" href="#resources">Browse all resources <span aria-hidden="true">↓</span></a>
+            <p class="hero-stat"><strong id="hero-resource-count">—</strong><span>resources · <span id="hero-category-count">—</span> categories</span></p>
+          </div>
+        </div>
+        <aside class="hero-showcase" aria-label="Featured resources from the collection">
+          <div class="showcase-topline"><span class="status-dot" aria-hidden="true"></span> Design picks from the collection <span class="showcase-index">4 LIVE LINKS</span></div>
+          <div class="showcase-grid" id="hero-featured-links">
+            <p class="showcase-loading">Finding something good…</p>
+          </div>
+          <div class="hero-discovery">
+            <div class="discovery-heading"><div><p class="discovery-label">A little inspiration</p><p class="discovery-category" id="hero-pick-category">Your next idea is out there</p></div><span class="discovery-orbit" aria-hidden="true">✳</span></div>
+            <a class="discovery-link" id="hero-pick-link" href="#resources" target="_blank" rel="noreferrer" aria-live="polite">Loading the collection…</a>
+            <button class="shuffle-button" id="shuffle-pick" type="button" disabled>
+              <span aria-hidden="true">⤨</span> Surprise me
+            </button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="catalog" id="resources" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">The collection</p><h2 id="catalog-title">Find your next favorite</h2></div>
+          <p class="section-description">Browse by category or search the entire catalog.</p>
+        </div>
+        <div class="catalog-layout">
+          <aside class="sidebar">
+            <div class="sidebar-heading"><span>Browse categories</span><span id="category-total" class="subtle"></span></div>
+            <nav id="category-list" aria-label="Resource categories"><p class="loading">Loading categories…</p></nav>
+            <p class="contribute">Have a good one? <a href="https://github.com/bradtraversy/design-resources-for-developers/blob/master/contributing.md">Suggest a resource</a></p>
+          </aside>
+          <div class="results">
+            <div id="active-category" class="active-category" aria-live="polite"></div>
+            <div class="search-row">
+              <label class="search-box">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg>
+                <span class="visually-hidden">Search resources</span>
+                <input id="search" type="search" placeholder="Search tools, fonts, colors…" autocomplete="off" spellcheck="false">
+                <kbd>/</kbd>
+              </label>
+              <p id="result-total" class="result-total" aria-live="polite"></p>
+            </div>
+            <div id="resource-grid" class="resource-grid" aria-live="polite" aria-busy="true">
+              <p class="loading">Gathering the good stuff…</p>
+            </div>
+            <p id="load-error" class="load-error" role="alert" hidden>We couldn’t load the catalog. Please try again in a moment.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Open design resources for the developer community.</p>
+      <a class="license" href="./LICENSE">MIT License <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>
